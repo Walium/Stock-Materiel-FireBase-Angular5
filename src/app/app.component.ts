@@ -31,10 +31,14 @@ constructor(private appareilService:AppareilService) {
   }
 
   ngOnInit(){
-  this.appareils=this.appareilService.appareils; 
+  this.appareils=this.appareilService.appareils;
   }
 
   onAllumer() {
-    console.log('On allume tout !');
-}
+    this.appareilService.switchOnAll();
+  }
+
+  onEteindre(){
+  this.appareilService.switchOffAll();
+  }
 }
